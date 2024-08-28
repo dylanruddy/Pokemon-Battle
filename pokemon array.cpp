@@ -46,6 +46,35 @@ string pokedex[] = {"", "Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charm
         "Kabuto", "Kabutops", "Aerodactyl", "Snorlax", "Articuno", "Zapdos", 
         "Moltres", "Dratini", "Dragonair", "Dragonite", "Mewtwo", "Mew"};
 
+string poke_type[] = {"", "Grass", "Grass", "Grass", "Fire", "Fire", "Fire",
+        "Water", "Water", "Water", "Bug", "Bug", "Bug",
+        "Bug", "Bug", "Bug", "Normal", "Normal", "Normal",
+        "Normal", "Normal", "Normal", "Normal", "Poison", "Poison",
+        "Electric", "Electric", "Ground", "Ground", "Poison", "Poison",
+        "Poison", "Poison", "Poison", "Poison", "Fairy", "Fairy",
+        "Fire", "Fire", "Normal", "Normal", "Poison", "Poison",
+        "Grass", "Grass", "Grass", "Bug", "Bug", "Bug",
+        "Bug", "Ground", "Ground", "Normal", "Normal", "Water",
+        "Water", "Fighting", "Fighting", "Fire", "Fire", "Water",
+        "Water", "Water", "Psychic", "Psychic", "Psychic", "Fighting",
+        "Fighting", "Fighting", "Grass", "Grass", "Grass",
+        "Water", "Water", "Rock", "Rock", "Rock",
+        "Fire", "Fire", "Water", "Water", "Electric", "Electric",
+        "Normal", "Normal", "Normal", "Water", "Water", "Poison",
+        "Poison", "Water", "Water", "Ghost", "Ghost", "Ghost",
+        "Rock", "Psychic", "Psychic", "Water", "Water", "Electric",
+        "Electric", "Grass", "Grass", "Ground", "Ground",
+        "Fighting", "Fighting", "Normal", "Poison", "Poison",
+        "Ground", "Ground", "Normal", "Grass", "Normal",
+        "Water", "Water", "Water", "Water", "Water", "Water",
+        "Psychic", "Bug", "Ice", "Electric", "Fire", "Bug",
+        "Normal", "Water", "Water", "Water", "Normal", "Normal",
+        "Water", "Water", "Water", "Normal", "Water", "Water",
+        "Normal", "Rock", "Rock", "Rock", "Rock", "Rock", "Rock",
+        "Flying", "Normal", "Ice", "Electric", "Fire", "Dragon",
+        "Dragon", "Dragon", "Psychic", "Psychic"
+    };
+
 
 //main function
 
@@ -111,15 +140,16 @@ void team_seclection(){
     trainer_1_team();
 
 cout << "You will battle with " << trainer1[pokedex] << endl;
+cout << "This is a " << trainer1[poke_type] << " type pokemon." << endl;
 
 
-
-cout << "Your opponent will now select their Pokemon. Press any key to continue" << endl;
+cout << "Your rival will now select their Pokemon. Press any key to continue" << endl;
 cin.get();
 
 trainer_2_team();
 
-cout << "Your opponent will battle with " << trainer2[pokedex] << " (#" << trainer2 << " In The Pokedex)" << endl;
+cout << "Your rival will battle with " << trainer2[pokedex] << " (#" << trainer2 << " In The Pokedex)" << endl;
+cout << "This is a " << trainer2[poke_type] << " type pokemon." << endl;
 
 
 
