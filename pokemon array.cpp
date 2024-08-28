@@ -6,29 +6,24 @@
 
 using namespace std;
 
+//Program Functions Declarations
 
-void pokedex();
+void trainer_1_team ();
+void trainer_2_team();
+void team_seclection();
 
+//TRAINER 1 = Player
+//TRAINER 2 = Opponent
+int trainer1 = 0;
+int trainer2 = 0;
 
-int main(){
+// POKEDEX
 
-
-pokedex();
-
-
-
-
-    return 0;
-}
-
-
-void pokedex () {
-
-string pokemon[] = {"", "Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon", "Charizard", 
+string pokedex[] = {"", "Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon", "Charizard", 
         "Squirtle", "Wartortle", "Blastoise", "Caterpie", "Metapod", "Butterfree", 
         "Weedle", "Kakuna", "Beedrill", "Pidgey", "Pidgeotto", "Pidgeot", 
         "Rattata", "Raticate", "Spearow", "Fearow", "Ekans", "Arbok", 
-        "Pikachu", "Raichu", "Sandshrew", "Sandslash", "Nidoran♀", "Nidorina", 
+        "Pikachu", "Raichu", "Sandshrew", "Sandslash", "Nidoran (Male)", "Nidorina (Female)", 
         "Nidoqueen", "Nidoran♂", "Nidorino", "Nidoking", "Clefairy", "Clefable", 
         "Vulpix", "Ninetales", "Jigglypuff", "Wigglytuff", "Zubat", "Golbat", 
         "Oddish", "Gloom", "Vileplume", "Paras", "Parasect", "Venonat", 
@@ -52,9 +47,31 @@ string pokemon[] = {"", "Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charm
         "Moltres", "Dratini", "Dragonair", "Dragonite", "Mewtwo", "Mew"};
 
 
+//main function
+
+int main(){
+
+
+team_seclection();
+
+
+system("PAUSE");
+
+
+    return 0;
+}
+
+
+// additional functions
+
+
+void trainer_1_team () {
+
+
+
 srand(time(nullptr));
 
-int number = rand() % 152;
+int number_player1 = rand() % 152;
 
 cout << "Press any key to generate a random number: " << endl;
 
@@ -62,10 +79,48 @@ cout << "Press any key to generate a random number: " << endl;
 cin.get();
 
 
-cout << "Your Pokemon Is " << number[pokemon] << "!" << " (#" << number << " In The Pokedex)"<< endl;
+cout << "Your Pokemon Is " << number_player1[pokedex] << "!" << " (#" << number_player1 << " In The Pokedex)"<< endl;
 
+trainer1 = number_player1;
 
 }
 
+void trainer_2_team () {
 
 
+
+srand(time(nullptr));
+
+int number_player2 = rand() % 152;
+
+
+/*
+cout << "Your opponent will battle with " << number_player2[pokedex] << "!" << " (#" << number_player2 << " In The Pokedex)"<< endl;
+*/
+
+
+
+trainer2 = number_player2;
+
+}
+
+void team_seclection(){
+
+   
+   
+    trainer_1_team();
+
+cout << "You will battle with " << trainer1[pokedex] << endl;
+
+
+
+cout << "Your opponent will now select their Pokemon. Press any key to continue" << endl;
+cin.get();
+
+trainer_2_team();
+
+cout << "Your opponent will battle with " << trainer2[pokedex] << " (#" << trainer2 << " In The Pokedex)" << endl;
+
+
+
+}
